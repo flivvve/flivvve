@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Detalhes da Camisa</title>
-  <link rel="stylesheet" href="assets/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Camisa</title>
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
+
 <body>
 
     <nav class="navbar">
         <h1>Minha Loja</h1>
-        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-        <ul class="nav-links" id="navLinks">
+        <div class="menu-icon" id="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Início</a></li>
             <li><a href="#">Contato</a></li>
             <li><a href="#">Sobre</a></li>
         </ul>
     </nav>
+    <main>
+        <div class="product-details">
+            <img src="images/shirt.jpg" alt="Camisa" class="product-img">
+            <div class="details">
+                <h2>Camisa Casual</h2>
+                <p>Preço: R$ 59,90</p>
+                <p>Descrição: Camisa de algodão confortável, ideal para uso casual.</p>
+                <button class="buy-btn">Comprar Agora</button>
+            </div>
+        </div>
+    </main>
 
-  <main>
-    <div class="product-details">
-      <img src="images/shirt.jpg" alt="Camisa" class="product-img">
-      <div class="details">
-        <h2>Camisa Casual</h2>
-        <p>Preço: R$ 59,90</p>
-        <p>Descrição: Camisa de algodão confortável, ideal para uso casual.</p>
-        <button class="buy-btn">Comprar Agora</button>
-      </div>
-    </div>
-  </main>
-
-  <script src="assets/script.js"></script>
+    <script src="assets/script.js"></script>
 </body>
+
 </html>

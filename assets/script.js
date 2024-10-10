@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("Site da loja carregado!");
-});
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
 
-function toggleMenu() {
-    const navLinks = document.getElementById('navLinks');
-    navLinks.classList.toggle('show');
-}
+    menuIcon.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menuIcon.classList.toggle('open');
+    });
+});

@@ -1,168 +1,85 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
-  }
-  
-  /* Navbar */
-  .navbar {
-    background-color: #333;
-    color: white;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navbar h1 {
-    margin: 0;
-  }
-  
-  .navbar ul {
-    list-style: none;
-    display: flex;
-  }
-  
-  .navbar li {
-    margin-left: 20px;
-  }
-  
-  .navbar a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  /* Menu para mobile */
-  .menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    display: none; /* Oculto no desktop */
-  }
-  
-  /* Menu Responsivo - Oculto inicialmente */
+/* Navbar */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.navbar h1 {
+  margin: 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Menu icon (hamburger) */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  background-color: white;
+  height: 3px;
+  width: 25px;
+  margin: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
   .nav-links {
-    display: flex;
-  }
-  
-  .nav-links li {
-    margin-left: 20px;
-  }
-  
-  /* Para dispositivos móveis */
-  @media (max-width: 768px) {
-    .menu-icon {
-      display: block; /* Mostrar ícone no mobile */
-    }
-  
-    .nav-links {
-      display: none; /* Ocultar links no mobile por padrão */
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      background-color: #333;
-      padding: 15px;
-      border-radius: 10px;
-      flex-direction: column;
-    }
-  
-    .nav-links li {
-      margin: 10px 0;
-    }
-  
-    .nav-links.show {
-      display: flex; /* Mostrar menu quando o ícone é clicado */
-    }
-  }
-  
-  /* Main */
-  main {
-    margin-top: 20px;
-  }
-  
-  /* Produtos */
-  .product-list {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .product-item {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 300px;
-  }
-  
-  .product-img {
-    max-width: 100%;
-    border-radius: 5px;
-  }
-  
-  .details-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    height: 100vh;
+    width: 100%;
     background-color: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  /* Detalhes do Produto */
-  .product-details {
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 0 auto;
+    justify-content: center;
+    transform: translateX(100%);
   }
-  
-  .product-details img {
-    max-width: 50%;
-    border-radius: 5px;
+
+  .nav-links.active {
+    transform: translateX(0);
   }
-  
-  .details {
-    margin-left: 20px;
+
+  .nav-links li {
+    margin: 20px 0;
   }
-  
-  .buy-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+
+  .menu-icon {
+    display: flex;
   }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .product-details {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .product-details img {
-      max-width: 100%;
-      margin-bottom: 20px;
-    }
-  
-    .details {
-      margin-left: 0;
-    }
+
+  /* Animação de transição do ícone */
+  .menu-icon.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
   }
-  
+
+  .menu-icon.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-icon.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
