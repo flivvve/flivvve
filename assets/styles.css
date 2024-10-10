@@ -39,6 +39,48 @@
     text-decoration: none;
   }
   
+  /* Menu para mobile */
+  .menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    display: none; /* Oculto no desktop */
+  }
+  
+  /* Menu Responsivo - Oculto inicialmente */
+  .nav-links {
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  /* Para dispositivos móveis */
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block; /* Mostrar ícone no mobile */
+    }
+  
+    .nav-links {
+      display: none; /* Ocultar links no mobile por padrão */
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #333;
+      padding: 15px;
+      border-radius: 10px;
+      flex-direction: column;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  
+    .nav-links.show {
+      display: flex; /* Mostrar menu quando o ícone é clicado */
+    }
+  }
+  
   /* Main */
   main {
     margin-top: 20px;
