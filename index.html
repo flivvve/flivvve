@@ -10,44 +10,82 @@
   <meta name="author" content="Your Name">
   <title>flivvve</title>
   <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/script.js"></script>
 </head>
 
 <body>
   <header>
-    <div class="container">
-      <h1>My Travel Blog</h1>
+      <h1>Controle de Viagens</h1>
       <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+          <ul>
+              <li><a href="#viagens">Minhas Viagens</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#contato">Contato</a></li>
+          </ul>
       </nav>
-    </div>
   </header>
 
   <main>
-    <section id="home">
-      <div class="container">
-        <h2>Welcome to My Travel Adventures</h2>
-        <p>Here you can explore my journeys, view photos, videos, and read stories from around the world.</p>
-        <button id="newPostButton">Create a New Post</button>
-      </div>
-    </section>
+      <section id="viagens">
+          <h2>Publicações de Viagens</h2>
 
-    <section id="posts" class="container">
-      <h2>Recent Posts</h2>
-      <div id="postList"></div>
-    </section>
+          <!-- Viagem 1 -->
+          <article class="viagem">
+              <h3>Viagem a Salvador, Bahia</h3>
+              <p><strong>Data:</strong> Janeiro de 2024</p>
+              <p>Aqui está a minha experiência incrível em Salvador, cheia de cultura e diversão! Não pude deixar de visitar o Pelourinho e as praias locais.</p>
+              <img src="salvador.jpg" alt="Praia de Salvador" class="imagem-viagem">
+              <video controls>
+                  <source src="video-salvador.mp4" type="video/mp4">
+                  Seu navegador não suporta vídeos.
+              </video>
+          </article>
+
+          <!-- Viagem 2 -->
+          <article class="viagem">
+              <h3>Explorando o Rio de Janeiro</h3>
+              <p><strong>Data:</strong> Março de 2024</p>
+              <p>O Rio é sempre vibrante! Passei um tempo explorando a cidade maravilhosa, incluindo o Cristo Redentor e as praias de Copacabana.</p>
+              <img src="rio.jpg" alt="Cristo Redentor" class="imagem-viagem">
+              <video controls>
+                  <source src="video-rio.mp4" type="video/mp4">
+                  Seu navegador não suporta vídeos.
+              </video>
+          </article>
+
+          <!-- Viagem 3 -->
+          <article class="viagem">
+              <h3>Descubra as Cataratas do Iguaçu</h3>
+              <p><strong>Data:</strong> Abril de 2024</p>
+              <p>Fiquei impressionado com as Cataratas do Iguaçu. A natureza é de tirar o fôlego e o Parque Nacional é impecável!</p>
+              <img src="iguacu.jpg" alt="Cataratas do Iguaçu" class="imagem-viagem">
+              <video controls>
+                  <source src="video-iguacu.mp4" type="video/mp4">
+                  Seu navegador não suporta vídeos.
+              </video>
+          </article>
+      </section>
+
+      <section id="sobre">
+          <h2>Sobre Mim</h2>
+          <p>Olá! Eu sou [Seu Nome], apaixonado por viajar e explorar novos destinos. Este site serve como meu diário de viagens, onde compartilho experiências, fotos e vídeos para inspirar outros a explorar o mundo.</p>
+      </section>
+
+      <section id="contato">
+          <h2>Contato</h2>
+          <p>Quer saber mais sobre minhas viagens ou trocar dicas? Entre em contato comigo!</p>
+          <form action="mailto:seuemail@dominio.com" method="get">
+              <label for="email">Seu E-mail:</label>
+              <input type="email" id="email" name="email" required>
+              <label for="mensagem">Sua Mensagem:</label>
+              <textarea id="mensagem" name="mensagem" required></textarea>
+              <button type="submit">Enviar</button>
+          </form>
+      </section>
   </main>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2024 Your Name. All rights reserved.</p>
-    </div>
+      <p>&copy; 2024 [Seu Nome]. Todos os direitos reservados.</p>
   </footer>
-
-  <script src="assets/script.js"></script>
 </body>
-
 </html>
