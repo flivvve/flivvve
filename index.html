@@ -1,91 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: flivvve
+---
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Explore my personal travel experiences through posts featuring photos, videos, and stories of my adventures.">
-  <meta name="keywords" content="travel blog, personal travels, travel stories, travel photos, travel videos">
-  <meta name="author" content="Your Name">
-  <title>flivvve</title>
-  <link rel="stylesheet" href="assets/styles.css">
-  <script src="assets/script.js"></script>
-</head>
+<div id="home">
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
 
-<body>
-  <header>
-      <h1>Controle de Viagens</h1>
-      <nav>
-          <ul>
-              <li><a href="#viagens">Minhas Viagens</a></li>
-              <li><a href="#sobre">Sobre</a></li>
-              <li><a href="#contato">Contato</a></li>
-          </ul>
-      </nav>
-  </header>
+  <h1>Highlighted Media</h1>
+  <ul class="posts">
+    <li><span>02 Sep 2013</span> &raquo; <a href="https://www.wired.com/2013/09/github-for-anything/">Article: WIRED - GitHub Is Going Mainstream</a></li>
+  </ul>
 
-  <main>
-      <section id="viagens">
-          <h2>Publicações de Viagens</h2>
+  <h1>Other Interviews, Talks, Etc</h1>
+  <ul class="posts">
+    <li><span>12 Sep 2013</span> &raquo; <a href="http://www.youtube.com/watch?v=k2vJNNAQZlg">Video: Fox Business News interview</a></li>
+  </ul>
 
-          <!-- Viagem 1 -->
-          <article class="viagem">
-              <h3>Viagem a Salvador, Bahia</h3>
-              <p><strong>Data:</strong> Janeiro de 2024</p>
-              <p>Aqui está a minha experiência incrível em Salvador, cheia de cultura e diversão! Não pude deixar de visitar o Pelourinho e as praias locais.</p>
-              <img src="salvador.jpg" alt="Praia de Salvador" class="imagem-viagem">
-              <video controls>
-                  <source src="video-salvador.mp4" type="video/mp4">
-                  Seu navegador não suporta vídeos.
-              </video>
-          </article>
-
-          <!-- Viagem 2 -->
-          <article class="viagem">
-              <h3>Explorando o Rio de Janeiro</h3>
-              <p><strong>Data:</strong> Março de 2024</p>
-              <p>O Rio é sempre vibrante! Passei um tempo explorando a cidade maravilhosa, incluindo o Cristo Redentor e as praias de Copacabana.</p>
-              <img src="rio.jpg" alt="Cristo Redentor" class="imagem-viagem">
-              <video controls>
-                  <source src="video-rio.mp4" type="video/mp4">
-                  Seu navegador não suporta vídeos.
-              </video>
-          </article>
-
-          <!-- Viagem 3 -->
-          <article class="viagem">
-              <h3>Descubra as Cataratas do Iguaçu</h3>
-              <p><strong>Data:</strong> Abril de 2024</p>
-              <p>Fiquei impressionado com as Cataratas do Iguaçu. A natureza é de tirar o fôlego e o Parque Nacional é impecável!</p>
-              <img src="iguacu.jpg" alt="Cataratas do Iguaçu" class="imagem-viagem">
-              <video controls>
-                  <source src="video-iguacu.mp4" type="video/mp4">
-                  Seu navegador não suporta vídeos.
-              </video>
-          </article>
-      </section>
-
-      <section id="sobre">
-          <h2>Sobre Mim</h2>
-          <p>Olá! Eu sou [Seu Nome], apaixonado por viajar e explorar novos destinos. Este site serve como meu diário de viagens, onde compartilho experiências, fotos e vídeos para inspirar outros a explorar o mundo.</p>
-      </section>
-
-      <section id="contato">
-          <h2>Contato</h2>
-          <p>Quer saber mais sobre minhas viagens ou trocar dicas? Entre em contato comigo!</p>
-          <form action="mailto:seuemail@dominio.com" method="get">
-              <label for="email">Seu E-mail:</label>
-              <input type="email" id="email" name="email" required>
-              <label for="mensagem">Sua Mensagem:</label>
-              <textarea id="mensagem" name="mensagem" required></textarea>
-              <button type="submit">Enviar</button>
-          </form>
-      </section>
-  </main>
-
-  <footer>
-      <p>&copy; 2024 [Seu Nome]. Todos os direitos reservados.</p>
-  </footer>
-</body>
-</html>
+  <h1>Noteworthy Open Source Projects and Specifications</h1>
+  <ul class="posts">
+    <li><a href="http://github.com/jekyll/jekyll/">Jekyll:</a> A simple, blog aware, static site generator (used for this site).</li>
+    <li><a href="http://semver.org">Semantic Versioning:</a> A meaningful method for incrementing version numbers.</li>
+    <li><a href="http://github.com/toml-lang/toml">TOML:</a> Tom's Obvious, Minimal Language.</li>
+    <li><a href="http://github.com/mojombo/god/">God:</a> Ruby process monitoring framework with easy extensibility.</li>
+    <li><a href="http://github.com/mojombo/chronic/">Chronic:</a> Ruby natural language date/time parser.</li>
+    <li><a href="http://tomdoc.org">TomDoc:</a> Code documentation for humans.</li>
+    <li><a href="http://github.com/mojombo/proxymachine/">ProxyMachine:</a> Layer 7 routing proxy in Ruby with Event Machine.</li>
+    <li><a href="http://github.com/github/gollum/">Gollum:</a> A simple, Git-powered wiki with a sweet API and local frontend.</li>
+    <li><a href="http://github.com/mojombo/grit/">Grit:</a> Object oriented Ruby bindings for Git (used by GitHub).</li>
+    <li><a href="http://github.com/mojombo/ernie/">Ernie:</a> Ruby/Erlang Hybrid BERT-RPC server.</li>
+  </ul>
+</div>
