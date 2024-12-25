@@ -4,24 +4,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Explore my personal travel experiences through posts featuring photos, videos, and stories of my adventures.">
+  <meta name="keywords" content="travel blog, personal travels, travel stories, travel photos, travel videos">
+  <meta name="author" content="Your Name">
   <title>flivvve</title>
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 
 <body>
   <header>
-    <h1>Travel Tracker</h1>
+    <div class="container">
+      <h1>My Travel Blog</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
+
   <main>
-      <div id="trip-list">
-          <!-- Travel items will be appended here -->
+    <section id="home">
+      <div class="container">
+        <h2>Welcome to My Travel Adventures</h2>
+        <p>Here you can explore my journeys, view photos, videos, and read stories from around the world.</p>
+        <button id="newPostButton">Create a New Post</button>
       </div>
-      <div class="add-trip">
-          <input type="text" id="destination" placeholder="Enter destination">
-          <input type="date" id="date">
-          <button onclick="addTrip()">Add Trip</button>
-      </div>
+    </section>
+
+    <section id="posts" class="container">
+      <h2>Recent Posts</h2>
+      <div id="postList"></div>
+    </section>
   </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </div>
+  </footer>
+
   <script src="assets/script.js"></script>
 </body>
 
