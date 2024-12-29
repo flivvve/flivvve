@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Nothing - A travel about nothing
+title: A trip about nothing
 ---
 
 {{ page.title }}
 ================
 
-<p class="meta">10 Nov 2016 - San Francisco</p>
+<p class="meta">1 Jan 2025 - Brazil</p>
 
 This is a story about nothing
 
