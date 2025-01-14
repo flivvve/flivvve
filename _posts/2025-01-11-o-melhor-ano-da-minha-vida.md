@@ -1,12 +1,12 @@
 ---
 layout: post
-title: O melhor ano da minha vida
+title: 2025 será o melhor ano da minha vida
 ---
 
 {{ page.title }}
 ================
 
-<p class="meta">11 Jan 2025 - Melhor Ano da Vida</p>
+<p class="meta">11 Jan 2025 - 2025 - Melhor Ano da Vida</p>
 
 Está proclamado que 2025 será o melhor ano da minha vida.
 
